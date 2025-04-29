@@ -5,8 +5,11 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -22,11 +25,6 @@ jobs:
 
       - name: Build project
         run: npm run build
-
-      - name: Setup Git identity
-        run: |
-          git config --global user.name "Sambow33"
-          git config --global user.email "Hazzakcom@gmail.com"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
