@@ -19,6 +19,7 @@ git add -A
 git commit -m 'deploy'
 
 # if you're deploying to https://<USERNAME>.github.io/<REPO>
+# replace USERNAME with your GitHub username and REPO with the repository name
 git push -f git@github.com:USERNAME/REPO.git main:gh-pages
 
 cd -
