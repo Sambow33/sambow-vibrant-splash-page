@@ -26,6 +26,8 @@ jobs:
 
       - name: Build project
         run: npm run build
+        env:
+          VITE_USER_NODE_ENV: production
 
       - name: Create CNAME file
         run: echo "www.sambow.net" > ./dist/CNAME
