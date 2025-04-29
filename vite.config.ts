@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir: "dist", // This is where the build files will go
   },
-  base: "./", // This ensures assets are loaded correctly on GitHub Pages
+  base: "/", // Changed from "./" to "/" to ensure correct absolute paths
   plugins: [
     react(),
     mode === 'development' &&
