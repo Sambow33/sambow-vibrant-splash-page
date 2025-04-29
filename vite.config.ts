@@ -1,8 +1,12 @@
+
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/sambow-vibrant-splash-page/',
+  base: '/',
   build: {
     outDir: 'dist',
   },
+  server: {
+    port: 8080
+  }
 });
